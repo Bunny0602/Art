@@ -4,37 +4,26 @@ import { View, TouchableOpacity, Image, StyleSheet } from "react-native";
 function BottomNav({ currentScreen, navigation }) {
   return (
     <View style={styles.navContainer}>
-      <TouchableOpacity
-        style={styles.navItem}
-        onPress={() => navigation.navigate("Home")}
-      >
+      <TouchableOpacity style={styles.navItem}>
         <Image
-          source={require("./assets/icons/home.png")}
+          source={require("./assets/icons/Profile.png")}
           style={[
             styles.icon,
-            currentScreen === "Home"
+            currentScreen === "Profile"
               ? { tintColor: "#FFFFFF" }
               : { tintColor: "rgba(255, 255, 255, 0.5)" },
           ]}
         />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.navItem}>
+      <TouchableOpacity
+        style={styles.navItem}
+        onPress={() => navigation.navigate("Home")}
+      >
         <Image
-          source={require("./assets/icons/clock.png")}
+          source={require("./assets/icons/Homes.png")}
           style={[
             styles.icon,
-            currentScreen === "clock"
-              ? { tintColor: "#FFFFFF" }
-              : { tintColor: "rgba(255, 255, 255, 0.4)" },
-          ]}
-        />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.navItem}>
-        <Image
-          source={require("./assets/icons/heart.png")}
-          style={[
-            styles.icon,
-            currentScreen === "Heart"
+            currentScreen === "Home"
               ? { tintColor: "#FFFFFF" }
               : { tintColor: "rgba(255, 255, 255, 0.4)" },
           ]}
@@ -42,10 +31,10 @@ function BottomNav({ currentScreen, navigation }) {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.navItem}
-        onPress={() => navigation.navigate("Account")}
+        onPress={() => navigation.navigate("Aboutus")}
       >
         <Image
-          source={require("./assets/icons/person.png")}
+          source={require("./assets/icons/AboutUS.png")}
           style={[
             styles.icon,
             currentScreen === "Account"
@@ -62,15 +51,15 @@ const styles = StyleSheet.create({
   navContainer: {
     position: "absolute",
     width: 360,
-    height: 70,
+    height: 73,
     bottom: 0,
-    backgroundColor: "#136D7D",
+    backgroundColor: "#CFB296",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: "#000",
   },
 
@@ -79,8 +68,8 @@ const styles = StyleSheet.create({
   },
 
   icon: {
-    width: 28,
-    height: 28,
+    width: 55,
+    height: 62,
   },
 });
 

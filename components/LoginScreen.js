@@ -23,35 +23,33 @@ function Login({ navigation }) {
     <SafeAreaView style={styles.container}>
       <View style={styles.innerContainer}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>Disease Insight</Text>
           <Image
-            source={require("./assets/icons/caduceus.png")}
-            style={styles.caduceusIcon}
+            source={require("./assets/images/Logo.png")}
+            style={styles.logo}
           />
         </View>
-        <Text style={styles.loginText}>Login</Text>
         <View style={styles.inputContainer}>
           <Image
-            source={require("./assets/icons/person.png")}
+            source={require("./assets/icons/user.png")}
             style={styles.icons}
           />
           <TextInput
             style={styles.input}
             placeholder="Username"
-            placeholderTextColor="rgba(255, 255, 255, 0.5)"
+            placeholderTextColor="rgba(0, 0, 0, 0.5)"
             value={username}
             onChangeText={setUsername}
           />
         </View>
         <View style={styles.inputContainer}>
           <Image
-            source={require("./assets/icons/lock.png")}
+            source={require("./assets/icons/locks.png")}
             style={styles.icons}
           />
           <TextInput
             style={styles.input}
             placeholder="Password"
-            placeholderTextColor="rgba(255, 255, 255, 0.5)"
+            placeholderTextColor="rgba(0, 0, 0, 0.5)"
             value={password}
             onChangeText={setPassword}
             secureTextEntry
@@ -66,6 +64,7 @@ function Login({ navigation }) {
         >
           <Text style={styles.buttonloginText}>Log In</Text>
         </TouchableOpacity>
+        <Text style={styles.Register}>Don’t have an account? Register</Text>
       </View>
     </SafeAreaView>
   );
@@ -74,7 +73,7 @@ function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#136D7D",
+    backgroundColor: "#85A5B7",
   },
 
   innerContainer: {
@@ -91,33 +90,17 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  title: {
-    fontSize: 30,
-    color: "#FFFFFF",
-    fontFamily: "Poppins-Bold",
-  },
-
-  caduceusIcon: {
-    width: 35,
-    height: 35,
-    marginLeft: 10,
-    tintColor: "#FFFFFF",
-  },
-
-  loginText: {
-    fontSize: 24,
-    marginTop: 20,
-    marginBottom: 25,
-    textAlign: "center",
-    color: "#FFFFFF",
-    fontFamily: "Poppins-Regular",
+  logo: {
+    width: 223,
+    height: 109,
+    marginBottom: 140,
   },
 
   icons: {
     width: 20,
     height: 20,
     marginLeft: 20,
-    tintColor: "rgba(255, 255, 255, 0.5)",
+    tintColor: "#000000",
   },
 
   input: {
@@ -125,40 +108,51 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     fontFamily: "Poppins-Regular",
     color: "#FFFFFF",
+    fontSize: 20,
+    letterSpacing: 0.5,
   },
 
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    borderRadius: 40,
-    width: 288,
-    height: 59,
+    borderRadius: 10,
+    width: 239,
+    height: 60,
     marginBottom: 10,
+    backgroundColor: "#D9D9D9",
   },
 
   forgotPassword: {
-    marginTop: 10,
-    marginBottom: 20,
-    color: "#FFFFFF",
+    marginTop: 15,
+    marginBottom: 30,
+    color: "#000000",
     fontSize: 15,
     letterSpacing: 1,
     fontFamily: "Poppins-Regular",
+    linespacing: 0.5,
   },
 
   button: {
-    backgroundColor: "#000000",
-    borderRadius: 40,
+    backgroundColor: "#CFB296",
+    borderRadius: 10,
     height: 59,
-    width: 288,
+    width: 243,
     alignItems: "center",
     justifyContent: "center",
   },
 
   buttonloginText: {
-    color: "#FFFFFF",
-    fontSize: 20,
-    fontFamily: "Poppins-Bold",
+    color: "#000000",
+    fontSize: 24,
+    fontFamily: "Poppins-Regular",
+    linespacing: 0.5,
+  },
+
+  Register: {
+    fontFamily: "Poppins-Medium",
+    fontSize: 13,
+    letterSpacing: 0.7,
+    marginTop: 3,
   },
 });
 

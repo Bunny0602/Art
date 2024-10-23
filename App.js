@@ -3,10 +3,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./components/LoginScreen";
 import Home from "./components/HomeScreen";
-import Account from "./components/AccountScreen";
-import Tuberculosis from "./components/TuberculosisScreen";
-import HivAids from "./components/Hiv&Aids";
-import Aboutus from "./components/AboutusScreen..js";
+import Picasso from "./components/picasso";
+import Aboutus from "./components/Aboutus";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,21 +22,10 @@ export default function App() {
           component={Home}
           options={{ headerShown: false }}
         />
-        <Stack.Screen
-          name="Account"
-          component={Account}
-          options={{ headerShown: false }}
-        />
 
         <Stack.Screen
-          name="Tuberculosis"
-          component={Tuberculosis}
-          options={{ headerShown: false }}
-        />
-
-        <Stack.Screen
-          name="HivAids"
-          component={HivAids}
+          name="Picasso"
+          component={Picasso}
           options={{ headerShown: false }}
         />
 
